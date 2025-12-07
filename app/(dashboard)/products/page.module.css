@@ -1,0 +1,412 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-black-rich);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.025em;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 1rem;
+}
+
+.addButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    background-color: var(--color-gold-primary);
+    color: var(--color-white-pure);
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 6px -1px rgba(212, 175, 55, 0.2);
+}
+
+.addButton:hover {
+    background-color: var(--color-gold-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 8px -1px rgba(212, 175, 55, 0.3);
+}
+
+.searchBar {
+    position: relative;
+    max-width: 500px;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3.5rem;
+    border: 1px solid var(--color-gray-border);
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.2s;
+    background: var(--color-white-pure);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.searchInput:focus {
+    border-color: var(--color-gold-primary);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.loading {
+    text-align: center;
+    padding: 4rem;
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem;
+    background: var(--color-white-pure);
+    border-radius: 1rem;
+    border: 2px dashed var(--color-gray-border);
+    color: #94a3b8;
+    gap: 1.5rem;
+}
+
+.emptyButton {
+    margin-top: 1rem;
+    padding: 0.875rem 2rem;
+    background-color: var(--color-gold-primary);
+    color: var(--color-white-pure);
+    border-radius: 0.75rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.emptyButton:hover {
+    background-color: var(--color-gold-hover);
+}
+
+.table {
+    background: var(--color-white-pure);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-premium);
+    border: 1px solid var(--color-gray-border);
+}
+
+.table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead {
+    background-color: var(--color-gray-light);
+    border-bottom: 2px solid var(--color-gray-border);
+}
+
+.table th {
+    padding: 1.25rem 1.5rem;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.table td {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--color-gray-border);
+    vertical-align: middle;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.table tr:hover td {
+    background-color: #fcfcfc;
+}
+
+.productImage {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-gray-border);
+}
+
+.noImage {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-gray-light);
+    border-radius: 0.5rem;
+    color: #94a3b8;
+    border: 1px solid var(--color-gray-border);
+}
+
+.sku {
+    font-family: 'Courier New', monospace;
+    color: #64748b;
+    font-size: 0.875rem;
+    background: var(--color-gray-light);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+}
+
+.name {
+    font-weight: 600;
+    color: var(--color-black-rich);
+    font-size: 0.95rem;
+}
+
+.price {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-black-rich);
+}
+
+.priceHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.eyeButton {
+    padding: 0.25rem;
+    border: none;
+    background: none;
+    color: #94a3b8;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.eyeButton:hover {
+    background-color: var(--color-gray-light);
+    color: var(--color-gold-primary);
+}
+
+.hiddenPrice {
+    color: #cbd5e1;
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+}
+
+.profit {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.profitAmount {
+    font-weight: 600;
+    color: #15803d;
+}
+
+.profitPercent {
+    font-size: 0.75rem;
+    color: #16a34a;
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.actionButton {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--color-gray-border);
+    background: var(--color-white-pure);
+    color: #64748b;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.actionButton:hover {
+    background-color: var(--color-gold-primary);
+    border-color: var(--color-gold-primary);
+    color: var(--color-white-pure);
+}
+
+.deleteButton:hover {
+    background-color: #ef4444;
+    border-color: #ef4444;
+    color: white;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.pageButton {
+    padding: 0.625rem 1.25rem;
+    border: 1px solid var(--color-gray-border);
+    background: var(--color-white-pure);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+    color: #64748b;
+}
+
+.pageButton:hover:not(:disabled) {
+    background-color: var(--color-gold-primary);
+    border-color: var(--color-gold-primary);
+    color: var(--color-white-pure);
+}
+
+.pageButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: var(--color-gray-light);
+}
+
+.pageInfo {
+    color: #64748b;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background: var(--color-white-pure);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    max-width: 400px;
+    width: 90%;
+    border: 1px solid var(--color-gray-border);
+}
+
+.modalTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-black-rich);
+    margin-bottom: 0.5rem;
+}
+
+.modalSubtitle {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.passwordInput {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid var(--color-gray-border);
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s;
+    margin-bottom: 1rem;
+}
+
+.passwordInput:focus {
+    border-color: var(--color-gold-primary);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.error {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.modalActions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+.cancelButton {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--color-gray-border);
+    background: var(--color-white-pure);
+    color: #64748b;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 600;
+}
+
+.cancelButton:hover {
+    background-color: var(--color-gray-light);
+    color: var(--color-black-rich);
+}
+
+.submitButton {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-gold-primary);
+    color: var(--color-white-pure);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 600;
+}
+
+.submitButton:hover {
+    background-color: var(--color-gold-hover);
+    transform: translateY(-1px);
+}

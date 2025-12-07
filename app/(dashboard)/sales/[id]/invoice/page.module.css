@@ -1,0 +1,311 @@
+.container {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 2rem auto;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
+    color: #000;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Section */
+.header {
+    background-color: #000;
+    color: #fff;
+    padding: 2.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+.brand h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin: 0;
+    line-height: 1;
+}
+
+.brand p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.invoiceLabel {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Info Section */
+.infoSection {
+    padding: 3rem 3rem 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.billTo h3 {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.customerDetails {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #000;
+}
+
+.customerDetails strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.invoiceMeta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 300px;
+}
+
+.metaRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.metaLabel {
+    font-weight: 600;
+    color: #000;
+}
+
+.metaValue {
+    font-weight: 500;
+}
+
+/* Table Section */
+.tableContainer {
+    padding: 2rem 3rem;
+    flex: 1;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.table th {
+    background-color: #000;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 700;
+    border: 1px solid #000;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+.table th:first-child {
+    text-align: center;
+    width: 60px;
+}
+
+.table th:nth-child(3),
+.table th:nth-child(4),
+.table th:nth-child(5) {
+    text-align: center;
+}
+
+.table td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    font-size: 0.95rem;
+}
+
+.table td:first-child {
+    text-align: center;
+}
+
+.table td:nth-child(3),
+.table td:nth-child(4),
+.table td:nth-child(5) {
+    text-align: center;
+}
+
+/* Grand Total */
+.grandTotalContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 3rem 2rem 3rem;
+}
+
+.grandTotalBox {
+    background-color: #f3f4f6;
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+.grandTotalLabel {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #000;
+}
+
+.grandTotalValue {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #000;
+}
+
+/* Bottom Section */
+.bottomSection {
+    padding: 0 3rem 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+    page-break-inside: avoid;
+}
+
+.paymentInfo h3 {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.signatory {
+    text-align: center;
+}
+
+.signatoryTitle {
+    font-weight: 800;
+    margin-top: 0.5rem;
+}
+
+.thanks {
+    margin-top: 2rem;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer {
+    background-color: #f3f4f6;
+    padding: 2rem 3rem;
+    margin-top: 2rem;
+    border-radius: 2rem 2rem 0 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    page-break-inside: avoid;
+}
+
+.footerTitle {
+    font-weight: 800;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.printButton {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 100;
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 10mm;
+        /* Use small margin to avoid browser defaults clipping */
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+
+    .container {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        border: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Reduce padding for print to fit content better */
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    .infoSection {
+        padding: 1rem 2rem;
+    }
+
+    .tableContainer {
+        padding: 0.5rem 2rem;
+    }
+
+    .grandTotalContainer {
+        padding: 0 2rem 1rem 2rem;
+    }
+
+    .bottomSection {
+        padding: 0 2rem 1rem 2rem;
+        margin-top: auto;
+    }
+
+    .footer {
+        padding: 1rem 2rem;
+        margin-top: 0;
+        /* Keep rounded corners */
+    }
+
+    .printButton {
+        display: none;
+    }
+
+    /* Ensure background colors are printed */
+    .container * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}

@@ -1,0 +1,221 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-black-rich);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.025em;
+}
+
+.addButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    background-color: var(--color-gold-primary);
+    color: var(--color-white-pure);
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 6px -1px rgba(212, 175, 55, 0.2);
+}
+
+.addButton:hover {
+    background-color: var(--color-gold-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 8px -1px rgba(212, 175, 55, 0.3);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchBox {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3.5rem;
+    border: 1px solid var(--color-gray-border);
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.2s;
+    background: var(--color-white-pure);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.searchInput:focus {
+    border-color: var(--color-gold-primary);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.loading {
+    text-align: center;
+    padding: 4rem;
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+.tableContainer {
+    background: var(--color-white-pure);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-premium);
+    border: 1px solid var(--color-gray-border);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead {
+    background-color: var(--color-gray-light);
+    border-bottom: 2px solid var(--color-gray-border);
+}
+
+.table th {
+    padding: 1.25rem 1.5rem;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.table td {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--color-gray-border);
+    vertical-align: middle;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.table tr:hover td {
+    background-color: #fcfcfc;
+}
+
+.dateCell,
+.userCell,
+.companyCell {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+    color: var(--color-black-rich);
+}
+
+.dateCell {
+    font-family: 'Courier New', monospace;
+    color: #64748b;
+}
+
+.timeSubtext {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-left: 1.75rem;
+    margin-top: 0.25rem;
+}
+
+.itemsList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.itemRow {
+    color: #475569;
+    font-size: 0.9rem;
+}
+
+.amount {
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    color: var(--color-black-rich);
+    font-size: 1rem;
+}
+
+.status {
+    padding: 0.35rem 0.875rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-block;
+}
+
+.paid {
+    background-color: #dcfce7;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
+.pending {
+    background-color: #fef9c3;
+    color: #a16207;
+    border: 1px solid #fde047;
+}
+
+.cancelled {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+.actionButton {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--color-gray-border);
+    background: var(--color-white-pure);
+    color: #64748b;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.actionButton:hover {
+    background-color: var(--color-gold-primary);
+    border-color: var(--color-gold-primary);
+    color: var(--color-white-pure);
+}
+
+.emptyState {
+    text-align: center;
+    padding: 4rem;
+    color: #94a3b8;
+    font-style: italic;
+}

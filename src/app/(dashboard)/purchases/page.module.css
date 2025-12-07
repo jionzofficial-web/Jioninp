@@ -1,0 +1,127 @@
+.container {
+    padding: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.addButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.addButton:hover {
+    background-color: #1d4ed8;
+}
+
+.controls {
+    margin-bottom: 2rem;
+}
+
+.searchBox {
+    position: relative;
+    max-width: 400px;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 3rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.tableContainer {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    background-color: #f8fafc;
+    padding: 1rem 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    color: #64748b;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.table td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+    vertical-align: top;
+}
+
+.dateCell,
+.companyCell {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.itemsList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.itemRow {
+    font-size: 0.9rem;
+}
+
+.amount {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 4rem;
+    color: #94a3b8;
+}
+
+.loading {
+    text-align: center;
+    padding: 4rem;
+    color: #64748b;
+}

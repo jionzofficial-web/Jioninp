@@ -1,0 +1,238 @@
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+    padding-bottom: 4rem;
+}
+
+.header {
+    margin-bottom: 2.5rem;
+}
+
+.title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-black-rich);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.025em;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 1rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card {
+    background: var(--color-white-pure);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-premium);
+    border: 1px solid var(--color-gray-border);
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-black-rich);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--color-gray-border);
+    letter-spacing: -0.01em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.label {
+    font-weight: 600;
+    color: #475569;
+    font-size: 0.9rem;
+}
+
+.input,
+.select {
+    padding: 0.875rem 1rem;
+    border: 1px solid var(--color-gray-border);
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.2s;
+    background: var(--color-white-pure);
+    width: 100%;
+    color: var(--color-black-rich);
+}
+
+.input:focus,
+.select:focus {
+    border-color: var(--color-gold-primary);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.itemsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.itemRow {
+    display: grid;
+    grid-template-columns: 3fr 1.5fr 1fr 1fr auto;
+    gap: 1.25rem;
+    align-items: end;
+    padding: 1.5rem;
+    background-color: var(--color-gray-light);
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-gray-border);
+    transition: all 0.2s;
+}
+
+.itemRow:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.readOnlyInput {
+    background-color: #e2e8f0;
+    color: #64748b;
+    cursor: not-allowed;
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+}
+
+.removeButton {
+    padding: 0.875rem;
+    color: #ef4444;
+    background: var(--color-white-pure);
+    border: 1px solid #fee2e2;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+}
+
+.removeButton:hover {
+    color: white;
+    background-color: #ef4444;
+    border-color: #ef4444;
+    transform: translateY(-1px);
+}
+
+.addItemButton {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    background-color: var(--color-white-pure);
+    border: 1px solid var(--color-gold-primary);
+    border-radius: 0.75rem;
+    color: var(--color-gold-primary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 1rem;
+}
+
+.addItemButton:hover {
+    background-color: var(--color-gold-primary);
+    color: var(--color-white-pure);
+    transform: translateY(-1px);
+}
+
+.summary {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 2px solid var(--color-gray-border);
+}
+
+.totalRow {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-black-rich);
+}
+
+.totalRow span:last-child {
+    font-family: 'Courier New', monospace;
+    color: var(--color-gold-primary);
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.cancelButton {
+    padding: 1rem 2rem;
+    border: 1px solid var(--color-gray-border);
+    border-radius: 0.75rem;
+    background-color: var(--color-white-pure);
+    color: #64748b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.cancelButton:hover {
+    background-color: var(--color-gray-light);
+    color: var(--color-black-rich);
+}
+
+.submitButton {
+    padding: 1rem 3rem;
+    background-color: var(--color-gold-primary);
+    color: var(--color-white-pure);
+    border: none;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px -1px rgba(212, 175, 55, 0.2);
+    font-size: 1rem;
+}
+
+.submitButton:hover {
+    background-color: var(--color-gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(212, 175, 55, 0.3);
+}
+
+.submitButton:disabled {
+    background-color: #cbd5e1;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.error {
+    background-color: #fef2f2;
+    color: #991b1b;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #fecaca;
+    font-weight: 500;
+}

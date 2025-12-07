@@ -1,0 +1,84 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.subtitle {
+  color: #64748b;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.icon {
+  color: #64748b;
+}
+
+.value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.description {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.recentSection {
+  margin-top: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.placeholderBox {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 3rem;
+  text-align: center;
+  color: #94a3b8;
+  border: 2px dashed #e2e8f0;
+}
